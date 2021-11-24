@@ -5,8 +5,10 @@
  * @author Ali Zargari
  */
 
-import nav from'./nav.js';
 
+import header from './header.js';
+import content from './content.js';
+import footer from './footer.js';
 
 /***
  *
@@ -14,7 +16,14 @@ import nav from'./nav.js';
  *
  */
 function createPage(){
-    return nav();
+    let elem = document.createElement('div');
+    elem.className = 'page';
+
+    elem.appendChild(header());
+    elem.appendChild(content());
+    elem.appendChild(footer());
+
+    return elem;
 }
 
 export default createPage;

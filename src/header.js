@@ -10,9 +10,9 @@ import nav from'./nav.js';
 
 /***
  *
- * @returns {HTMLDivElement} footer element
+ * @returns {HTMLDivElement} header element
  */
-function createFooter(){
+function createHeader(){
     let elem = document.createElement('div');
     elem.appendChild(nav());
 
@@ -21,4 +21,4 @@ function createFooter(){
     return elem;
 }
 
-export default createFooter;
+export default createHeader;

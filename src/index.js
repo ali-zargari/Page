@@ -1,14 +1,10 @@
 import _ from 'lodash';
 import './style.scss';
-import p from './page.js';
-
-console.log('testing13');
+import page from './page.js';
 
 function component() {
-    const element = document.createElement('div');
-    element.className = 'container';
+    const element = page();
 
-    element.appendChild(p());
     return element;
 }
 

@@ -14,7 +14,7 @@
  * @param n number of buttons to be added
  * @returns {*} an element with n buttons + class names representing them.
  */
-function attachButtons (elem, n){
+function attachNavButtons (elem, n){
     let temp = '';
     for(let i = 0; i < n; i++){
         temp = document.createElement('div');
@@ -32,7 +32,7 @@ function attachButtons (elem, n){
 function createNav (){
     let elem = document.createElement('div');
     elem.className = 'nav-bar'
-    elem = attachButtons(elem, 3);
+    elem = attachNavButtons(elem, 3);
 
     return elem;
 }
