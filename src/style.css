@@ -1,50 +1,47 @@
-@use './_essentials.scss' as *;
-@use './_variables.scss' as *;
-
 /***
  * Global initializers
  */
-*{
+* {
   margin: 0;
   padding: 0;
   font-size: 20px;
 }
 
-body{
+body {
   height: 100vh;
 }
-
 
 /***
  * Set up page content
  */
-.page{
-  @include makeFlexContainer(center, center, column, red);
-  height: $screen_height;
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: red;
+  height: 100vh;
   margin: 0;
   padding: 0;
-
 }
 
-.header{
+.header {
   width: 50px;
   flex: 0 1 10%;
   background-color: red;
   border: solid;
 }
 
-.content{
+.content {
   border: solid;
   flex: 0 1 10%;
   background-color: green;
-
 }
 
-.footer{
-
+.footer {
   border: solid;
   flex: 0 1 10%;
   background-color: yellow;
-
 }
 
+/*# sourceMappingURL=style.css.map */

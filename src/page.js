@@ -6,8 +6,6 @@
  */
 
 import './style.scss';
-import './_essentials.scss';
-import './_variables.scss';
 import header from './header.js';
 import content from './content.js';
 import footer from './footer.js';
