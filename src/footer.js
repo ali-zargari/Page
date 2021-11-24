@@ -16,7 +16,7 @@ function createFooter(){
     let elem = document.createElement('div');
     elem.appendChild(nav());
 
-    elem.className = 'header';
+    elem.className = 'footer';
 
     return elem;
 }

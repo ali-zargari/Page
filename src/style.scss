@@ -1,0 +1,52 @@
+@use './_essentials.scss' as *;
+@use './_variables.scss' as *;
+
+/***
+ * Global initializers
+ */
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+body{
+  height: 100vh;
+}
+
+
+/***
+ * Set up page content
+ */
+.page{
+  @include flexCenter('column',rgb(230,130,30));
+  margin: 0;
+  padding: 0;
+
+}
+
+.header{
+  flex: 1 1 100%;
+  height: $screen_height;
+  position: relative;
+  background-color: red;
+
+}
+
+.content{
+
+  flex: 1 1 100%;
+  height: $screen_height;
+  position: relative;
+  background-color: green;
+
+}
+
+.footer{
+  flex: 1 1 100%;
+  height: $screen_height;
+  position: relative;
+  background-color: yellow;
+
+}
+
