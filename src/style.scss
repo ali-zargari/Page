@@ -1,6 +1,7 @@
 @use './_essentials.scss' as *;
 @use './_variables.scss' as *;
 
+
 /***
  * Global initializers
  */
@@ -19,31 +20,69 @@ body{
  * Set up page content
  */
 .page{
-  @include makeFlexContainer(center, center, column, red);
+  @include makeFlexContainer(flex-start, center, column, 'url(\'./snow-btn.jpg\')');
   height: $screen_height;
+  width: $screen_width;
   margin: 0;
   padding: 0;
-
+  background: url('./snow-btn.jpg');
 }
 
 .header{
-  width: 50px;
-  flex: 0 1 10%;
-  background-color: red;
-  border: solid;
+  width: $screen_width;
+  min-height: 250px;
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+  background: url('./snow-btn.jpg');
+
+
+  .nav-bar{
+    width: 100%;
+    backdrop-filter: blur(10px);
+    @include makeFlexContainer(center, center, row, 'url(\'./snow-btn.jpg\')');
+  }
+
+  li{
+    -webkit-clip-path: circle(49.5% at 50% 50%);
+    clip-path: circle(49.5% at 50% 50%);
+    height: 100px;
+    width: 100px;
+    margin: 0 5px;
+
+
+  }
+
+  .btn_0{
+
+    background: url('./snow-btn.jpg');
+    background-size: 150px;
+
+
+  }
+
+  .btn_1{
+
+    background: url('./desert_1.jpg');
+    background-size: 220px;
+  }
+
+  .btn_2{
+    background: url('./city.jpg');
+    background-size: 150px;
+  }
 }
 
 .content{
-  border: solid;
-  flex: 0 1 10%;
+  width: $screen_width;
+  flex: 0 0 60%;
   background-color: green;
 
 }
 
 .footer{
-
-  border: solid;
-  flex: 0 1 10%;
+  width: $screen_width;
+  flex: 0 0 15%;
   background-color: yellow;
 
 }

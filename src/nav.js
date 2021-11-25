@@ -6,6 +6,7 @@
  *
  */
 
+import 'animate.css';
 
 /***
  * Helper method to place btn DOMS in nav bar.
@@ -17,9 +18,15 @@
 function attachNavButtons (elem, n){
     let temp = '';
     for(let i = 0; i < n; i++){
-        temp = document.createElement('div');
-        temp.className = 'btn '+i;
+        temp = document.createElement('li');
+        temp.className = 'btn_'+i;
+
+        temp.addEventListener('click',function (e){
+            e.target.style.margin = '30px';
+        });
+
         elem.appendChild(temp);
+
     }
     return elem;
 }
@@ -30,7 +37,7 @@ function attachNavButtons (elem, n){
  *
  */
 function createNav (){
-    let elem = document.createElement('div');
+    let elem = document.createElement('ul');
     elem.className = 'nav-bar'
     elem = attachNavButtons(elem, 3);
 

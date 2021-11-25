@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "animate.css": "^4.1.1",
     "lodash": "^4.17.21"
   },
   "name": "Page",

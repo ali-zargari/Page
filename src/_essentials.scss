@@ -1,3 +1,6 @@
+/***
+ *
+ */
 @mixin makeFlexContainer($c_just, $al_item, $direction, $backGround){
   display: flex;
   justify-content: $c_just;
@@ -5,4 +8,5 @@
   flex-direction: $direction;
   background: $backGround;
 }
+
 

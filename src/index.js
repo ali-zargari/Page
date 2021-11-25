@@ -1,6 +1,7 @@
 import _ from 'lodash';
-import './style.scss';
 import page from './page.js';
+import './style.scss';
+
 
 function component() {
     const element = page();
