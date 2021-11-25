@@ -21,8 +21,10 @@ function attachNavButtons (elem, n){
         temp = document.createElement('li');
         temp.className = 'btn_'+i;
 
+
         temp.addEventListener('click',function (e){
-            e.target.style.margin = '30px';
+            e.target.style.cssText += 'transform: scale(3);\nmargin: 0 5.5%;';
+            //e.target.classList.add('animate__animated', 'animate__bounceOutLeft');
         });
 
         elem.appendChild(temp);

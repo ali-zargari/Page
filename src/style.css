@@ -48,11 +48,20 @@ body {
   background: "url('./snow-btn.jpg')";
 }
 .header li {
+  flex: 0 0 100px;
+  height: 100px;
   -webkit-clip-path: circle(49.5% at 50% 50%);
   clip-path: circle(49.5% at 50% 50%);
-  height: 100px;
-  width: 100px;
+  transition: all 1s ease-in-out;
   margin: 0 5px;
+}
+.header li:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+  margin: 0 2%;
+}
+.header li:focus {
+  transform: scale(20);
+  margin: 0 3%;
 }
 .header .btn_0 {
   background: url("./snow-btn.jpg");
