@@ -14,7 +14,7 @@ import nav from'./nav.js';
  */
 function createFooter(){
     let elem = document.createElement('div');
-    elem.appendChild(nav());
+    elem.appendChild(nav.createNav(3));
 
     elem.className = 'footer';
 

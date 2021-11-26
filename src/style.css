@@ -52,7 +52,7 @@ body {
   height: 100px;
   -webkit-clip-path: circle(49.5% at 50% 50%);
   clip-path: circle(49.5% at 50% 50%);
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
   margin: 0 5px;
 }
 .header li:hover {
