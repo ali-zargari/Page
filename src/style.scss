@@ -20,80 +20,110 @@ body{
  * Set up page content
  */
 .page{
-  @include makeFlexContainer(flex-start, center, column, 'url(\'./snow-btn.jpg\')');
+  @include makeFlexContainer(flex-start, center, column, 100%);
   height: $screen_height;
   width: $screen_width;
   margin: 0;
   padding: 0;
-  background: url('./snow-btn.jpg');
-}
-
-.header{
-  width: $screen_width;
-  min-height: 250px;
-  flex: 0 0 25%;
-  display: flex;
-  justify-content: center;
-  background: url('./snow-btn.jpg');
 
 
-  .nav-bar{
+  .header_background{
+    min-height: 250px;
+    height: $header_height;
     width: 100%;
-    backdrop-filter: blur(10px);
-    @include makeFlexContainer(center, center, row, 'url(\'./snow-btn.jpg\')');
-  }
-
-  li{
-    flex: 0 0 100px;
-    height: 100px;
-    -webkit-clip-path: circle(49.5% at 50% 50%);
-    clip-path: circle(49.5% at 50% 50%);
-    transition: all 0.5s ease-in-out;
-    margin: 0 5px;
-
-
-    &:hover{
-      transform: scale3d(1.5, 1.5, 1.5);
-      margin: 0 2%;
-    }
-
-    &:focus{
-      transform: scale(20);
-      margin: 0 3%;
-    }
-
-  }
-
-  .btn_0{
-
-    background: url('./snow-btn.jpg');
-    background-size: 150px;
-  }
-
-  .btn_1{
-
-    background: url('./desert_1.jpg');
-    background-size: 220px;
-  }
-
-  .btn_2{
-
+    position: absolute;
+    left: 0;
+    top: 0;
     background: url('./city.jpg');
-    background-size: 150px;
+    filter: blur(7px);
+    background-size: $screen_width 100%;
+
   }
-}
 
-.content{
-  width: $screen_width;
-  flex: 0 0 60%;
-  background-color: green;
+  .header{
+    width: $screen_width;
+    min-height: 250px;
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: center;
 
-}
 
-.footer{
-  width: $screen_width;
-  flex: 0 0 15%;
-  background-color: yellow;
+    .nav-bar{
+      width: 100%;
+      background: none;
+      @include makeFlexContainer(center, center, row, 100%);
+      filter: drop-shadow(0 0 1rem #000000);
+
+    }
+
+    li{
+      flex: 0 0 100px;
+      height: 100px;
+      -webkit-clip-path: circle(49.5% at 50% 50%);
+      clip-path: circle(49.5% at 50% 50%);
+      transition: all 0.5s ease-in-out;
+      margin: 0 5px;
+
+
+      &:hover{
+        transform: scale3d(1.5, 1.5, 1.5);
+        margin: 0 2%;
+      }
+
+      &:focus{
+        transform: scale(20);
+        margin: 0 3%;
+      }
+
+    }
+
+    .btn_0{
+      //filter: drop-shadow(30px 100px 4px #ff8181);
+      background: url('./snow-btn.jpg');
+      background-size: 150px;
+    }
+
+    .btn_1{
+      //filter: drop-shadow(30px 100px 4px #4444dd);
+      background: url('./desert_1.jpg');
+      background-size: 220px;
+    }
+
+    .btn_2{
+      filter: drop-shadow(30px 100px 4px #4444dd);
+      background: url('./city.jpg');
+      background-size: 150px;
+
+    }
+  }
+
+
+
+  .content{
+    width: $screen_width;
+    flex: 0 0 60%;
+    //background: url('./city.jpg');
+
+
+    .content_background{
+      min-height: 250px;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: url('./desert_1.jpg');
+      filter: blur(5px);
+      background-size: $screen_width 100%;
+
+    }
+  }
+
+  .footer{
+    width: $screen_width;
+    flex: 0 0 15%;
+    background-color: yellow;
+
+  }
 
 }
 

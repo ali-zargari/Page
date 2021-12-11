@@ -14,8 +14,12 @@ import nav from'./nav.js';
  */
 function createHeader(){
     let elem = document.createElement('div');
-    elem.appendChild(nav.createNav(3));
 
+    let header_background = document.createElement('div');
+    header_background.className = 'header_background';
+    elem.appendChild(header_background);
+
+    elem.appendChild(nav.createNav(3));
     elem.className = 'header';
 
     return elem;

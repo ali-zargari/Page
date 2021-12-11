@@ -7,6 +7,7 @@
  */
 
 import 'animate.css';
+import content from './content.js';
 
 let Button = function (){
 
@@ -42,7 +43,7 @@ let Button = function (){
 }
 
 let Nav = ((n) =>{
-    let buttons = 'generate_buttons(n)';
+    let buttons = 'new Array()';
 
     function generate_buttons(n){
         let btns = new Array();
@@ -50,13 +51,19 @@ let Nav = ((n) =>{
             let temp = new Button();
             temp.initButton('btn_'+i , test);
             btns.push(temp);
+            console.log(btns[i].getElement());
         }
 
         return btns;
     }
 
     function test(){
-        console.log('help');
+        content.loadContent('url(\'./desert_1.jpg\');');
+
+    }
+
+    function getNav(){
+        return buttons;
     }
 
     /***
@@ -66,11 +73,11 @@ let Nav = ((n) =>{
      * @param n number of buttons to be added
      * @returns {*} an element with n buttons + class names representing them.
      */
-    function attachNavButtons (elem, n){
+    function attachNavButtons (elem){
 
         buttons.forEach(l =>{
             elem.appendChild(l.getElement());
-            console.log(l.getElement());
+            //console.log(l.getElement());
         })
 
         return elem;
@@ -83,10 +90,10 @@ let Nav = ((n) =>{
      */
     function createNav (n){
         buttons = generate_buttons(n);
-        console.log(buttons);
+        //console.log(buttons);
         let elem = document.createElement('ul');
         elem.className = 'nav-bar'
-        elem = attachNavButtons(elem, 3);
+        elem = attachNavButtons(elem);
 
         return elem;
     }

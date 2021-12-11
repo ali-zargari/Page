@@ -5,16 +5,42 @@
  * @author Ali Zargari
  */
 
-/***
- *
- * @returns {*} Load all of the content into the page.
- *
- */
-function createContentPane(){
-    let elem = document.createElement('div');
-    elem.className = 'content';
 
-    return elem;
-}
+ let Content = (() => {
 
-export default createContentPane;
+    let mainPane;
+    mainPane = '';
+
+    let background;
+    background = '';
+
+    /***
+     *
+     */
+    function loadContent(content) {
+
+        mainPane.style.background = "url('./"+content+")";
+        console.log(mainPane);
+    }
+
+    /***
+     *
+     * @returns {*} Load all of the content into the page.
+     *
+     */
+    function createPane() {
+        mainPane = document.createElement('div');
+        mainPane.className = 'content';
+
+        background = document.createElement('div');
+        background.className = 'content_background'
+
+        mainPane.appendChild(background);
+
+        return mainPane;
+    }
+
+    return {createPane, loadContent};
+})();
+
+export default Content;

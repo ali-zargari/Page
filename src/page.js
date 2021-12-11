@@ -19,7 +19,7 @@ function createPage(){
     elem.className = 'page';
 
     elem.appendChild(header());
-    elem.appendChild(content());
+    elem.appendChild(content.createPane());
     elem.appendChild(footer());
 
     return elem;
