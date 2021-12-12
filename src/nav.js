@@ -5,7 +5,9 @@
  * @author Ali Zargari
  *
  */
-
+import city from "./city.jpg";
+import desert from "./desert_1.jpg";
+import snow from "./snow.jpg";
 import 'animate.css';
 import content from './content.js';
 
@@ -58,7 +60,7 @@ let Nav = ((n) =>{
     }
 
     function test(){
-        content.loadContent('url(\'./desert_1.jpg\');');
+        content.loadContent(city);
 
     }
 

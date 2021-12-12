@@ -27,25 +27,26 @@ body{
   padding: 0;
 
 
-  .header_background{
-    min-height: 250px;
-    height: $header_height;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: url('./city.jpg');
-    filter: blur(7px);
-    background-size: $screen_width 100%;
-
-  }
-
   .header{
     width: $screen_width;
     min-height: 250px;
     flex: 0 0 25%;
     display: flex;
     justify-content: center;
+
+
+    .header_background{
+      min-height: 250px;
+      height: $header_height;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgb(29, 46, 63);
+      filter: blur(7px);
+      background-size: $screen_width 100%;
+
+    }
 
 
     .nav-bar{
@@ -79,7 +80,7 @@ body{
 
     .btn_0{
       //filter: drop-shadow(30px 100px 4px #ff8181);
-      background: url('./snow-btn.jpg');
+      background: url('./snow.jpg');
       background-size: 150px;
     }
 
@@ -111,14 +112,19 @@ body{
       height: 100%;
       left: 0;
       top: 0;
-      background: url('./desert_1.jpg');
+      //background: url('./desert_1.jpg');
       filter: blur(5px);
-      background-size: $screen_width 100%;
+      //background-size: 100% 100%;
 
     }
   }
 
   .footer{
+
+    .footer_background{
+
+    }
+
     width: $screen_width;
     flex: 0 0 15%;
     background-color: yellow;

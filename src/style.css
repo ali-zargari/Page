@@ -28,23 +28,23 @@ body {
   margin: 0;
   padding: 0;
 }
-.page .header_background {
-  min-height: 250px;
-  height: 25%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: url("./city.jpg");
-  filter: blur(7px);
-  background-size: 100% 100%;
-}
 .page .header {
   width: 100%;
   min-height: 250px;
   flex: 0 0 25%;
   display: flex;
   justify-content: center;
+}
+.page .header .header_background {
+  min-height: 250px;
+  height: 25%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #1d2e3f;
+  filter: blur(7px);
+  background-size: 100% 100%;
 }
 .page .header .nav-bar {
   width: 100%;
@@ -73,7 +73,7 @@ body {
   margin: 0 3%;
 }
 .page .header .btn_0 {
-  background: url("./snow-btn.jpg");
+  background: url("./snow.jpg");
   background-size: 150px;
 }
 .page .header .btn_1 {
@@ -95,9 +95,7 @@ body {
   height: 100%;
   left: 0;
   top: 0;
-  background: url("./desert_1.jpg");
   filter: blur(5px);
-  background-size: 100% 100%;
 }
 .page .footer {
   width: 100%;

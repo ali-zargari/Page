@@ -6,6 +6,7 @@
  */
 
 
+
  let Content = (() => {
 
     let mainPane;
@@ -19,8 +20,8 @@
      */
     function loadContent(content) {
 
-        mainPane.style.background = "url('./"+content+")";
-        console.log(mainPane);
+        mainPane.firstElementChild.style.background = "url("+content+")";
+        console.log(content);
     }
 
     /***
