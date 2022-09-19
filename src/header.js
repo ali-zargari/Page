@@ -6,14 +6,12 @@
  */
 
 
-import nav from'./nav.js';
-
 /***
  *
  * @returns {HTMLDivElement} header element
  */
 function createHeader(){
-    let elem = document.createElement('div');
+    /*let elem = document.createElement('div');
 
     let header_background = document.createElement('div');
     header_background.className = 'header_background';
@@ -22,7 +20,7 @@ function createHeader(){
     elem.appendChild(nav.createNav(3));
     elem.className = 'header';
 
-    return elem;
+    return elem;*/
 }
 
 export default createHeader;

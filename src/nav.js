@@ -5,25 +5,10 @@
  * @author Ali Zargari
  *
  */
-import city from "./city.jpg";
-import desert from "./desert_1.jpg";
-import snow from "./snow.jpg";
+
 import 'animate.css';
-import content from './content.js';
 
 let Button = function (){
-
-    this.shrink = function (){
-
-    }
-
-    this.expand = function (){
-
-    }
-
-    this.buttonSelected = function (b){
-        b.style.cssText += 'transform: scale(3);\nmargin: 0 5.5%;';
-    }
 
     this.addListener = function (listener, func){
         this.elem.addEventListener(listener, func)
@@ -45,27 +30,30 @@ let Button = function (){
 }
 
 let Nav = ((n) =>{
-    let buttons = 'new Array()';
+    let buttons = [];
 
     function generate_buttons(n){
-        let btns = new Array();
+        let btns = [];
         for(let i = 0; i < n; i++) {
             let temp = new Button();
-            temp.initButton('btn_'+i , test);
+            temp.initButton('btn_'+i , expand);
             btns.push(temp);
-            console.log(btns[i].getElement());
         }
-
         return btns;
     }
 
-    function test(){
-        content.loadContent(city);
+    function expand(e){
+        let button = e.target;
 
-    }
+        let correspondingBackgroundElement = document.getElementById(button.className+'_background');
+        let bgcopy = correspondingBackgroundElement;
 
-    function getNav(){
-        return buttons;
+        let panel = document.getElementById('bp');
+        panel.getElementsByClassName(button.className+"_background")[0].remove();
+        panel.append(bgcopy);
+
+        correspondingBackgroundElement.classList.add('open');
+
     }
 
     /***
@@ -79,7 +67,6 @@ let Nav = ((n) =>{
 
         buttons.forEach(l =>{
             elem.appendChild(l.getElement());
-            //console.log(l.getElement());
         })
 
         return elem;
@@ -92,7 +79,6 @@ let Nav = ((n) =>{
      */
     function createNav (n){
         buttons = generate_buttons(n);
-        //console.log(buttons);
         let elem = document.createElement('ul');
         elem.className = 'nav-bar'
         elem = attachNavButtons(elem);
@@ -100,7 +86,11 @@ let Nav = ((n) =>{
         return elem;
     }
 
-    return {createNav};
+    function getButtons(){
+        return buttons;
+    }
+
+    return {createNav, getButtons};
 })();
 
 

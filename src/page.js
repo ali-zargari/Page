@@ -1,11 +1,10 @@
 /***
  *
- * Responsible for all of the content on the page
+ * Responsible for all the content on the page
  *
  * @author Ali Zargari
  */
 
-import header from './header.js';
 import content from './content.js';
 import footer from './footer.js';
 
@@ -18,10 +17,7 @@ function createPage(){
     let elem = document.createElement('div');
     elem.className = 'page';
 
-    elem.appendChild(header());
     elem.appendChild(content.createPane());
-    elem.appendChild(footer());
-
     return elem;
 }
 
