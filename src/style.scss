@@ -63,14 +63,27 @@ body{
   }
 
   .close{
-    clip-path: circle(0%);
+    animation: makeDeactive 1s forwards;
+
   }
 
   @keyframes makeActive {
     0%{
-      clip-path: circle(  3% at   (left + right)/2  px  (height + top)/2  px )
+      clip-path: circle(  0% at   (left + right)/2  px  (height + top)/2  px )
     }
-    100%{clip-path: circle(100%)}
+    100%{
+      clip-path: circle(100%)
+    }
+
+  }
+
+  @keyframes makeDeactive {
+    0%{
+      clip-path: circle(100%)
+    }
+    100%{
+      clip-path: circle(0%)
+    }
 
   }
 

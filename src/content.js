@@ -55,7 +55,7 @@ import space_img from './space.jpg';
 
 
 
-        city_background.className = 'btn_0_background';
+        city_background.className = 'btn_0_background close';
         city_background.id = 'btn_0_background'
         city_background.src = city_img;
         city_background.title = 'city';
@@ -67,9 +67,10 @@ import space_img from './space.jpg';
         city_background.transition = 'ease 1s';
         backgroundPanel.appendChild(city_background);
         city_background.style.clipPath = 'circle(3% at 43% top)';
+        city_background.style.visibility = 'hidden';
 
 
-        desert_background.className = 'btn_1_background';
+        desert_background.className = 'btn_1_background close';
         desert_background.id = 'btn_1_background';
         desert_background.src = desert_img_1;
         desert_background.title = 'desert';
@@ -81,9 +82,10 @@ import space_img from './space.jpg';
         desert_background.transition = 'ease 1s';
         backgroundPanel.appendChild(desert_background);
         desert_background.style.clipPath = 'circle(3% at 47% top)';
+        desert_background.style.visibility = 'hidden';
 
 
-        space_background.className = 'btn_2_background';
+        space_background.className = 'btn_2_background close';
         space_background.id = 'btn_2_background'
         space_background.src = space_img;
         space_background.title = 'space';
@@ -95,7 +97,7 @@ import space_img from './space.jpg';
         space_background.transition = 'ease 1s';
         backgroundPanel.appendChild(space_background);
         space_background.style.clipPath = 'circle(3% at 56% top)';
-
+        space_background.style.visibility = 'hidden';
 
 
         mainPane.appendChild(backgroundPanel);

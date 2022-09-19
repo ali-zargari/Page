@@ -31,6 +31,7 @@ let Button = function (){
 
 let Nav = ((n) =>{
     let buttons = [];
+    let selected = -1;
 
     function generate_buttons(n){
         let btns = [];
@@ -45,14 +46,41 @@ let Nav = ((n) =>{
     function expand(e){
         let button = e.target;
 
-        let correspondingBackgroundElement = document.getElementById(button.className+'_background');
-        let bgcopy = correspondingBackgroundElement;
 
+        if(selected === document.getElementById(button.className+'_background')){
+            return;
+        }
+
+
+        //let correspondingBackgroundElement = document.getElementById(button.className+'_background');
         let panel = document.getElementById('bp');
-        panel.getElementsByClassName(button.className+"_background")[0].remove();
-        panel.append(bgcopy);
 
-        correspondingBackgroundElement.classList.add('open');
+        //console.log(panel);
+        panel.childNodes.forEach(bg =>{
+            if(bg.className.includes(button.className+"_background")){
+                bg.style.visibility = 'visible';
+                panel.appendChild(bg);
+                bg.classList.add('open');
+                bg.classList.remove('close');
+                selected = bg;
+            } else {
+
+                bg.classList.add('close');
+                bg.classList.remove('open');
+            }
+        });
+
+        //setTimeout(function(){
+        //    panel.childNodes.forEach(bg =>{
+        //        if(!bg.className.includes(button.className+"_background") || !bg.className.includes(selected.className)){
+         //           bg.classList.add('close');
+        //            bg.classList.remove('open');
+//
+         //       }
+//
+        //    });
+       // }, 500);
+
 
     }
 
@@ -67,7 +95,7 @@ let Nav = ((n) =>{
 
         buttons.forEach(l =>{
             elem.appendChild(l.getElement());
-        })
+        });
 
         return elem;
     }
