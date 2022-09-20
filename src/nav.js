@@ -70,18 +70,6 @@ let Nav = ((n) =>{
             }
         });
 
-        //setTimeout(function(){
-        //    panel.childNodes.forEach(bg =>{
-        //        if(!bg.className.includes(button.className+"_background") || !bg.className.includes(selected.className)){
-         //           bg.classList.add('close');
-        //            bg.classList.remove('open');
-//
-         //       }
-//
-        //    });
-       // }, 500);
-
-
     }
 
     /***
