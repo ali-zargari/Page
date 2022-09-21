@@ -6,8 +6,6 @@
  *
  */
 
-import 'animate.css';
-
 let Button = function (){
 
     this.addListener = function (listener, func){
@@ -29,7 +27,7 @@ let Button = function (){
 
 }
 
-let Nav = ((n) =>{
+let Nav = (() =>{
     let buttons = [];
     let selected = -1;
 
@@ -76,7 +74,6 @@ let Nav = ((n) =>{
      * Helper method to place btn DOMS in nav bar.
      *
      * @param elem element to attach the buttons to.
-     * @param n number of buttons to be added
      * @returns {*} an element with n buttons + class names representing them.
      */
     function attachNavButtons (elem){
@@ -102,11 +99,8 @@ let Nav = ((n) =>{
         return elem;
     }
 
-    function getButtons(){
-        return buttons;
-    }
 
-    return {createNav, getButtons};
+    return {createNav};
 })();
 
 

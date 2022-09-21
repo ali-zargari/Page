@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import page from './page.js';
 import './style.scss';
 
