@@ -87,32 +87,36 @@ body{
 
   }
 
-  .btn_0{
-    //filter: drop-shadow(30px 100px 4px #ff8181);
-    background: url('./city.jpg');
-    background-size: 150px;
-  }
-
-  .btn_1{
-    //filter: drop-shadow(30px 100px 4px #4444dd);
-    background: url('./desert_1.jpg');
-    background-size: 220px;
-  }
-
-  .btn_2{
-    //filter: drop-shadow(30px 100px 4px #4444dd);
-    background: url('./space.jpg');
-    background-size: 150px;
-
-  }
 
 
   .nav-bar{
     width: 100%;
     background: none;
-    @include makeFlexContainer(center, center, row, 100%);
+    @include makeFlexContainer(left, center, row, 100%);
     filter: drop-shadow(0 0 1rem #000000);
     transition: all 1s;
+
+
+
+    .btn_0{
+      //filter: drop-shadow(30px 100px 4px #ff8181);
+      background: url('./city.jpg');
+      background-size: 150px;
+    }
+
+    .btn_1{
+      //filter: drop-shadow(30px 100px 4px #4444dd);
+      background: url('./desert_1.jpg');
+      background-size: 220px;
+    }
+
+    .btn_2{
+      //filter: drop-shadow(30px 100px 4px #4444dd);
+      background: url('./space.jpg');
+      background-size: 150px;
+
+    }
+
   }
 
   li{

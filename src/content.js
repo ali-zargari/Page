@@ -8,12 +8,6 @@
 
 import nav from './nav.js';
 
-import city_img from './city.jpg'
-import desert_img_1 from './desert_1.jpg';
-import space_img from './space.jpg';
-//import ttt from './app1.js';
-
-
  let Content = (() => {
 
     let mainPane;
@@ -59,6 +53,7 @@ import space_img from './space.jpg';
         sketch.data = 'https://ali-zargari.github.io/Sketch/'
 
 
+        ///MOVE INTO STYLESHEET LATER
         todo.className = 'btn_0_background close';
         todo.id = 'btn_0_background'
         //todo.src = city_img;
@@ -71,7 +66,7 @@ import space_img from './space.jpg';
         todo.style.clipPath = 'circle(0% )';
         todo.transition = 'ease 1s';
         backgroundPanel.appendChild(todo);
-        todo.style.clipPath = 'circle(3% at 43% top)';
+        todo.style.clipPath = 'circle(3% at 5% top)';
         todo.style.visibility = 'hidden';
 
 
@@ -87,7 +82,7 @@ import space_img from './space.jpg';
         ttt.style.clipPath = 'circle(0%)';
         ttt.transition = 'ease 1s';
         backgroundPanel.appendChild(ttt);
-        ttt.style.clipPath = 'circle(3% at 47% top)';
+        ttt.style.clipPath = 'circle(3% at 11% top)';
         ttt.style.visibility = 'hidden';
 
 
@@ -103,7 +98,7 @@ import space_img from './space.jpg';
         sketch.style.clipPath = 'circle(0%)';
         sketch.transition = 'ease 1s';
         backgroundPanel.appendChild(sketch);
-        sketch.style.clipPath = 'circle(3% at 56% top)';
+        sketch.style.clipPath = 'circle(3% at 18% top)';
         sketch.style.visibility = 'hidden';
 
         console.log(todo);
